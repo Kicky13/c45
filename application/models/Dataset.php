@@ -14,6 +14,6 @@ class Dataset extends CI_Model {
     }
     public function insertDataset($data)
     {
-
+        $this->db->insert('dataset', $data);
     }
 }

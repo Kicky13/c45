@@ -29,10 +29,26 @@ class Home extends CI_Controller {
             'rencana' => $_POST['rencana'],
             'masa' => $_POST['masa']
         );
-        $this->Klien->insert($klien);
+        $id = $this->Klien->insert($klien);
         $usia = $this->Usia->usiaInitial($_POST['usia']);
         $rencana = $this->Rencana->rencanaInitial($_POST['rencana']);
         $premi = $this->Premi->premiInitial($_POST['premi']);
         $masa = $this->Masa->masaInitial($_POST['masa']);
+        $dataset = array(
+            'id' => null,
+            'klien_id' => $id,
+            'usia_id' => $usia,
+            'gender_id' => $_POST['gender'],
+            'status_id' => $_POST['status'],
+            'penghasilan_id' => $_POST['gaji'],
+            'rencana_id' => $rencana,
+            'frekuensi_id' => $_POST['frekuensi'],
+            'premi_id' => $premi,
+            'masa_id' => $masa,
+            'tipe_id' => $tipe,
+            'kategori_id' => $_POST['kelas']
+        );
+        $this->Dataset->insertDataset($dataset);
+        redirect('/Home');
     }
 }

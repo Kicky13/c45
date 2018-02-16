@@ -40,15 +40,15 @@
     <tr>
         <th>#</th>
         <th><?php echo $training['nama']; ?></th>
-        <th>Usia</th>
-        <th>Gender</th>
-        <th>Status Marital</th>
-        <th>Penghasilan</th>
-        <th>Premi</th>
-        <th>Frekuensi</th>
-        <th>Rencana Bayar</th>
-        <th>Masa Beban</th>
-        <th>Kelas</th>
+        <th><?php echo $training['usia_ket']; ?></th>
+        <th><?php echo $training['gender']; ?></th>
+        <th><?php echo $training['status_marital']; ?></th>
+        <th><?php echo $training['penghasilan']; ?></th>
+        <th><?php echo $training['premi_ket']; ?></th>
+        <th><?php echo $training['frekuensi_bayar']; ?></th>
+        <th><?php echo $training['rencana_ket']; ?></th>
+        <th><?php echo $training['masa_ket']; ?></th>
+        <th><?php echo $training['kategori']; ?></th>
     </tr>
     <?php } ?>
 </table>

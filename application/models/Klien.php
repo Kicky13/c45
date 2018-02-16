@@ -10,6 +10,7 @@ class Klien extends CI_Model {
     public function insert($klien)
     {
         $data = array(
+            'id' => null,
             'nama' => $klien['nama'],
             'usia_ket' => $klien['usia'],
             'premi_ket' => $klien['premi'],
@@ -17,5 +18,6 @@ class Klien extends CI_Model {
             'masa_ket' => $klien['masa']
         );
         $this->db->insert('klien', $data);
+        return $this->db->insert_id();
     }
 }
