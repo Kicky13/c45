@@ -7,4 +7,15 @@ class Usia extends CI_Model {
     {
         parent::__construct();
     }
+    public function usiaInitial($usia)
+    {
+        if ($usia <= 29){
+            $id = 1;
+        } elseif ($usia >= 30 && $usia <= 39){
+            $id = 2;
+        } else {
+            $id = 3;
+        }
+        return $id;
+    }
 }

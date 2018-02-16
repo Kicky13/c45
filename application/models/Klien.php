@@ -7,14 +7,14 @@ class Klien extends CI_Model {
     {
         parent::__construct();
     }
-    public function insert($nama, $usia, $premi, $rencana, $masa)
+    public function insert($klien)
     {
         $data = array(
-            'nama' => $nama,
-            'usia_ket' => $usia,
-            'premi_ket' => $premi,
-            'rencana_ket' => $rencana,
-            'masa_ket' => $masa
+            'nama' => $klien['nama'],
+            'usia_ket' => $klien['usia'],
+            'premi_ket' => $klien['premi'],
+            'rencana_ket' => $klien['rencana'],
+            'masa_ket' => $klien['masa']
         );
         $this->db->insert('klien', $data);
     }

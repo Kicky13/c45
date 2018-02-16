@@ -22,6 +22,8 @@
     <input name="rencana" type="text"><br>
     <label>Masa Pembebanan : </label><br>
     <input name="masa" type="text"><br>
+    <label>Kelas : </label><br>
+    <input name="kelas" type="radio" value="1"> Lancar <input name="kelas" type="radio" value="2"> Tidak Lancar <br>
     <button type="submit" value="submit">Submit</button>
 </form>
 </body>

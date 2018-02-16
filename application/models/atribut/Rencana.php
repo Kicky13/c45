@@ -7,4 +7,13 @@ class Rencana extends CI_Model {
     {
         parent::__construct();
     }
+    public function rencanaInitial($rencana)
+    {
+        if ($rencana <= 10){
+            $id = 1;
+        } else {
+            $id = 2;
+        }
+        return $id;
+    }
 }

@@ -6,7 +6,8 @@ class Home extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('Dataset', 'Klien');
+        $this->load->model('Dataset');
+        $this->load->model('Klien');
     }
 
     public function index()
@@ -21,6 +22,17 @@ class Home extends CI_Controller {
     }
     public function submit($tipe)
     {
-
+        $klien = array(
+            'nama' => $_POST['nama'],
+            'usia' => $_POST['usia'],
+            'premi' => $_POST['premi'],
+            'rencana' => $_POST['rencana'],
+            'masa' => $_POST['masa']
+        );
+        $this->Klien->insert($klien);
+        $usia = $this->Usia->usiaInitial($_POST['usia']);
+        $rencana = $this->Rencana->rencanaInitial($_POST['rencana']);
+        $premi = $this->Premi->premiInitial($_POST['premi']);
+        $masa = $this->Masa->masaInitial($_POST['masa']);
     }
 }
